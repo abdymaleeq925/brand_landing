@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Marketing Agency Landing Page (Community)</title>
 </head>
@@ -29,7 +29,7 @@
                     
                 </div>
                 <div class="header__cta">
-                    <button class="btn btn--primary">Book A Call</button>
+                    <button class="btn btn--primary openModal">Book A Call</button>
                     <div class="header__burger">
                         <img src="./img/list-solid.svg" alt="image">
                     </div>
@@ -183,7 +183,7 @@
                     <div class="our-work__item"><img src="./img/Rectangle 162.png" alt=""><span class="title">Coca-Cola</span></div>
                     <div class="our-work__item"><img src="./img/Rectangle 163.png" alt=""><span class="title">Nike</span></div>
                 </div>
-                <button class="btn btn--primary">See More</button>
+                <button class="btn btn--primary openModal">See More</button>
             </div>
         </section>
         <section class="banner">
@@ -196,7 +196,7 @@
                         <div class="banner__cta">
                             <p class="txt">Ready to transform your digital dresence? 
                                 Let's create magic together! book our services now!</p>
-                            <button class="btn btn--secondary">Book Call</button>
+                            <button class="btn btn--secondary openModal">Book Call</button>
                         </div>
                     </div>
                 </div>
@@ -218,7 +218,7 @@
                         <p class="txt">Discover the brilliance behind  Embrace. 
                             Our team blends innovation and artistry to craft 
                             digital wonders that captivate</p>
-                        <button class="btn btn--primary">Learn More</button>
+                        <button class="btn btn--primary openModal">Learn More</button>
                     </div>
                 </div
             </div>
@@ -240,9 +240,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="testimonial__wrapper">
-                    <div class="testimonial__slider">
-                        <div class="testimonial__slide active">
+                <div class="testimonial__wrapper swiper">
+                    <div class="testimonial__slider swiper-wrapper">
+                        <div class="testimonial__slide swiper-slide">
                             <div class="testimonial__slide-heading">
                                 <img src="./img/user-1.png" alt="image" class="user">
                                 <div class="user-info">
@@ -256,7 +256,7 @@
                                 Thrilled with what they achieved!"
                             </p>
                         </div>
-                        <div class="testimonial__slide">
+                        <div class="testimonial__slide swiper-slide">
                             <div class="testimonial__slide-heading">
                                 <img src="./img/user-2.png" alt="image" class="user">
                                 <div class="user-info">
@@ -267,11 +267,53 @@
                             <p class="txt">
                                 I found the digital expertise I needed. Their 
                                 creative-professional balance exceeded expectations. 
-                                Friendly interactions, exceptional outcomes. For digital 
-                                enchantment, it's got to be Embrace!
+                                Friendly interactions, exceptional outcomes.
                             </p>
                         </div>
-                        <div class="testimonial__slide">
+                        <div class="testimonial__slide swiper-slide">
+                            <div class="testimonial__slide-heading">
+                                <img src="./img/user-3.png" alt="image" class="user">
+                                <div class="user-info">
+                                    <h4>Amelia Joseph</h4>
+                                    <span>Chief Manager</span>
+                                </div>
+                            </div>
+                            <p class="txt">
+                                My vision came alive effortlessly. Their blend of 
+                                casual and professional approach made the process a 
+                                breeze. Creativity flowed, and the results were beyond 
+                                my expectations.
+                            </p>
+                        </div>
+                        <div class="testimonial__slide swiper-slide">
+                            <div class="testimonial__slide-heading">
+                                <img src="./img/user-1.png" alt="image" class="user">
+                                <div class="user-info">
+                                    <h4>Jacob Joshua</h4>
+                                    <span>Chief Manager</span>
+                                </div>
+                            </div>
+                            <p class="txt">
+                                Embrace really nails it! Creative brilliance, approachable 
+                                style. They're the partners you want—artistry meets strategy. 
+                                Thrilled with what they achieved!"
+                            </p>
+                        </div>
+                        <div class="testimonial__slide swiper-slide">
+                            <div class="testimonial__slide-heading">
+                                <img src="./img/user-2.png" alt="image" class="user">
+                                <div class="user-info">
+                                    <h4>Nina Simone</h4>
+                                    <span>Chief Manager</span>
+                                </div>
+                            </div>
+                            <p class="txt">
+                                I found the digital expertise I needed. Their 
+                                creative-professional balance exceeded expectations. 
+                                Friendly interactions, exceptional outcomes.
+                            </p>
+                        </div>
+                        <div class="testimonial__slide swiper-slide">
                             <div class="testimonial__slide-heading">
                                 <img src="./img/user-3.png" alt="image" class="user">
                                 <div class="user-info">
@@ -295,7 +337,7 @@
                 <div class="banner-cta__wrapper">
                     <div class="banner-cta__title">
                         <h2 class="h2">Start Your Journey With Us Now</h2>
-                        <button class="btn btn--primary">Start Now</button>
+                        <button class="btn btn--primary openModal">Start Now</button>
                     </div>
                     <div class="banner-cta__illustration">
                         <img src="./img/green__ellipse.svg" alt="image">
@@ -386,7 +428,7 @@
                                 <a href=""><img src="./img/ic_baseline-facebook.png" alt="image"></a>
                                 <a href=""><img src="./img/ri_instagram-fill.png" alt="image"></a>
                             </div>
-                            <button class="btn btn--primary">Contact Us</button>
+                            <button class="btn btn--primary openModal">Contact Us</button>
                         </div>
                     </div>
                     <div class="footer__menus">
@@ -425,5 +467,16 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <div class="modal-inner">
+            <h2 class="h2">
+                Some text
+            </h2>
+            <div class="close">x</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
