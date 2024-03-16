@@ -1,4 +1,4 @@
-*, ::before, ::after {
+* {
     box-sizing: border-box;
 }
 
@@ -164,39 +164,44 @@ h3,
 .header {
     padding: 18px 0;
     border-bottom: 1px solid var(--my-gray);
-
+    overflow: hidden;
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
     ul {
         display: flex;
         gap: 15px;
     }
+    &__burger {
+        display: none;
+    }
     .burger-menu {
-        .header__burger, .links{
-            display: none;
-            width: 20px;
+        position: fixed;
+        display: block;
+        z-index: 3;
+        width: 250px;
+        right: -100%;
+        top: 0;
+        border-style: double;
+        background-color: #fff;
+        transition: all .2s ease;
+        &.show-menu {
+            right: 0%;
         }
-        .links.show-menu {
-            position: absolute;
-            display: block;
-            z-index: 3;
-            width: 18%;
-            left: 80%;
-            border-style: double;
-            border-radius: 10px;
-            background-color: #fff;
+        ul {
+            gap: 0;
         }
     }
     .links {
-        position: absolute;
         list-style: none;
         display: flex;
+        flex-direction: column;
+        
         margin: 0;
         padding: 0;
+        
         li {
             color:black;
             font-size: 16px;
@@ -819,18 +824,17 @@ h3,
         &__menu {
             display: none;
         }
-        .burger-menu {
-            .header__burger{
-                display: block;
-            }
-            .links {
-                display: none;
-            }
+        &__burger {
+            display: block;
+            width: 27px;
         }
         &__cta {
             display: flex;
             align-items: center;
             gap: 15px;
+        }
+        .btn--primary {
+            font-size: 16px;
         }
     }
     .hero {

@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const burgerMenu = document.querySelector('.burger-menu'),
-          navLinks = document.querySelector('.links');
+    const burgerMenu = document.querySelector('.header__burger'),
+          closeMenu = document.querySelector('.close__btn'),
+          navLinks = document.querySelector('.burger-menu');
 
-    burgerMenu.addEventListener('click', function() {
-        console.log(navLinks);
-        navLinks.classList.toggle('show-menu');
-    })
+    burgerMenu.addEventListener('click', () => {
+        navLinks.classList.add('show-menu');
+    });
+    closeMenu.addEventListener('click', () => {
+        navLinks.classList.remove('show-menu'); 
+    });
+    document.addEventListener('click', function(e) {
+        if(!burgerMenu.contains(e.target) && !navLinks.contains(e.target)) {
+            navLinks.classList.remove('show-menu');
+        }
+    });
 
     const swiper = new Swiper('.testimonial__wrapper.swiper', {
         speed: 400,
@@ -28,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const btn = document.querySelectorAll('.openModal');
     const modal = document.querySelector('.modal');
-    const close = document.querySelector('.close');
-    const body = document.getElementsByTagName('body')[0];
+    const close = document.querySelector('.close'),
+          body = document.querySelector('body')[0];
     
     btn.forEach(function(b) {
         b.addEventListener('click' , function() {
@@ -38,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    close.addEventListener('click' , function() {
+    close.addEventListener('click', function() {
         modal.style.display = 'none';
         body.style.overflow = 'unset';
     });
